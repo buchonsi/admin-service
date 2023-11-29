@@ -14,7 +14,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @DisplayName("View 컨트롤러 - 댓글 관리")
 @Import(SecurityConfig.class)
-@WebMvcTest(AdminUserAccountController.class)
+@WebMvcTest(ArticleCommentManagementController.class)
 class ArticleCommentManagementControllerTest {
 
     private final MockMvc mockMvc;
@@ -31,6 +31,7 @@ class ArticleCommentManagementControllerTest {
         mockMvc.perform(get("/management/article-comments"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))    //지정한 것과 호환되는 것이면 충분하다.
-                .andExpect(view().name("/management/article-comments"));
+                .andExpect(view().name("/management/articleComments"))
+        ;
     }
 }

@@ -31,6 +31,7 @@ class AdminUserAccountControllerTest {
         mockMvc.perform(get("/admin/members"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))    //지정한 것과 호환되는 것이면 충분하다.
-                .andExpect(view().name("/admin/members"));
+                .andExpect(view().name("/admin/members"))
+        ;
     }
 }
