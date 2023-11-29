@@ -14,7 +14,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @DisplayName("View 컨트롤러 - 회원 관리")
 @Import(SecurityConfig.class)
-@WebMvcTest(ArticleManagementController.class)
+@WebMvcTest(UserAccountManagementController.class)
 class UserAccountManagementControllerTest {
 
     private final MockMvc mockMvc;
@@ -31,6 +31,7 @@ class UserAccountManagementControllerTest {
         mockMvc.perform(get("/management/user-accounts"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML))    //지정한 것과 호환되는 것이면 충분하다.
-                .andExpect(view().name("/management/user-accounts"));
+                .andExpect(view().name("/management/userAccounts"))
+        ;
     }
 }
