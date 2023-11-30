@@ -17,43 +17,42 @@
     <main id="layout-main">
       <table id="main-table" class="table table-bordered table-striped">
         <thead>
-          <tr>
-            <th>ID</th>
-            <th>제목</th>
-            <th>작성자</th>
-            <th>작성일</th>
-          </tr>
+        <tr>
+          <th>ID</th>
+          <th>제목</th>
+          <th>작성자</th>
+          <th>작성일</th>
+        </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>새 글1</td>
-            <td>yoon</td>
-            <td><time datetime="2023-12-01T00:00:00">2023-12-01 00:00:00</time></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>새 글2</td>
-            <td>yoon</td>
-            <td><time datetime="2023-12-02T00:00:00">2023-12-02 00:00:00</time></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>새 글3</td>
-            <td>yoon</td>
-            <td><time datetime="2023-12-03T00:00:00">2023-12-03 00:00:00</time></td>
-          </tr>
+        <tr>
+          <td>1</td>
+          <td>새 글1</td>
+          <td>yoon</td>
+          <td><time datetime="2023-12-01T00:00:00">2023-12-01 00:00:00</time></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>새 글2</td>
+          <td>yoon</td>
+          <td><time datetime="2023-12-02T00:00:00">2023-12-02 00:00:00</time></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>새 글3</td>
+          <td>yoon</td>
+          <td><time datetime="2023-12-03T00:00:00">2023-12-03 00:00:00</time></td>
+        </tr>
         </tbody>
         <tfoot>
-          <tr>
-            <td>ID</td>
-            <td>제목</td>
-            <td>작성자</td>
-            <td>작성일시</td>
-          </tr>
+        <tr>
+          <td>ID</td>
+          <td>제목</td>
+          <td>작성자</td>
+          <td>작성일시</td>
+        </tr>
         </tfoot>
       </table>
-
     </main>
     <!-- /.content -->
 
@@ -80,7 +79,7 @@
   <script>
     $(function () {
       $("#main-table").DataTable({
-        "responsive": true, "lengthChange": false, "autoWidth": false,
+        "responsive": true, "lengthChange": true, "autoWidth": false,
         "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
       }).buttons().container().appendTo('#main-table_wrapper .col-md-6:eq(0)');
     });
